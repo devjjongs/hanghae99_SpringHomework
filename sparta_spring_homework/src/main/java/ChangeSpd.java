@@ -1,3 +1,3 @@
 public interface ChangeSpd {
-    void changeSpd(int nowSpeed, int increaseSpd, String status);
+    void changeSpd(int nowSpeed, String status);
 }

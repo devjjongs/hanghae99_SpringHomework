@@ -5,8 +5,6 @@ public class Transport {
     int fuel;
     //- 속도
     int nowSpeed;
-    //- 속도 변경
-    int increaseSpd;
     //- 최대 승객 수
     int maxPassenger;
     //- 현재 승객
@@ -17,11 +15,10 @@ public class Transport {
     int fare;
 
 
-    public Transport(int transNum, int fuel, int nowSpeed, int increaseSpd, int maxPassenger, int nowPassenger, int fare, String status) {
+    public Transport(int transNum, int fuel, int nowSpeed, int maxPassenger, int nowPassenger, int fare, String status) {
         this.transNum = transNum;
         this.fuel = fuel;
         this.nowSpeed = nowSpeed;
-        this.increaseSpd = increaseSpd;
         this.maxPassenger = maxPassenger;
         this.nowPassenger = nowPassenger;
         this.fare = fare;
@@ -29,7 +26,7 @@ public class Transport {
     }
 
     public Transport(int transNum, int fuel, int nowSpeed, int nowPassenger, int fare, String status) {
-        this(0, 100, 0, 0, 0, 0, 0, "운행중");
+        this(0, 100, 0, 0,  0, 0, "운행중");
     }
 
 }
