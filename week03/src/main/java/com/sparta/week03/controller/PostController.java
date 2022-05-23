@@ -14,6 +14,7 @@ import java.util.List;
 public class PostController {
 
     private final PostRepository postRepository;
+
     private final PostService postService;
 
     // 게시글 작성 API
@@ -25,20 +26,21 @@ public class PostController {
 
     // 게시글 조회 API
     @GetMapping("/api/posts")
-    public List<Post> getPosts() {
+    public List<Post> getPosts(String title, String comment, String writer) {
         return postRepository.findAll();
     }
 
     // 게시글 수정 API
     @PutMapping("/api/posts/{id}")
-    public Long updatePost(@PathVariable Long id, @RequestBody PostRequestDto requestDto) {
+    public Long updatePosts(@PathVariable Long id, @RequestBody PostRequestDto requestDto) {
         return postService.update(id, requestDto);
     }
 
     // 게시글 삭제 API
-    @DeleteMapping("/api/posts/{id}")
-    public Long deletePosts(@PathVariable Long id, String password) {
+    @DeleteMapping("/api/psots/{id}")
+    public Long delete(@PathVariable Long id) {
         postRepository.deleteById(id);
         return id;
     }
+
 }

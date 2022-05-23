@@ -14,30 +14,28 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String title;
 
-    @Column
+    @Column(nullable = false)
+    private String comment;
+
+    @Column(nullable = false)
     private String writer;
 
-    @Column
+    @Column(nullable = false)
     private String password;
-
-    public Post(String title, String writer, String password) {
-        this.title = title;
-        this.writer = writer;
-        this.password = password;
-    }
 
     public Post(PostRequestDto requestDto) {
         this.title = requestDto.getTitle();
+        this.comment = requestDto.getComment();
         this.writer = requestDto.getWriter();
         this.password = requestDto.getPassword();
     }
 
     public void update(PostRequestDto requestDto) {
-        this.title = title;
-        this.writer = writer;
-        this.password = password;
+        this.title = requestDto.getTitle();
+        this.comment = requestDto.getComment();
+        this.writer = requestDto.getWriter();
     }
 }

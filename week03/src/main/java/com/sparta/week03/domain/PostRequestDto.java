@@ -8,7 +8,8 @@ import lombok.Setter;
 @Setter
 @RequiredArgsConstructor
 public class PostRequestDto {
-    private final String title;
-    private final String writer;
-    private final String password;
+    private String title;
+    private String comment;
+    private String writer;
+    private String password;
 }
