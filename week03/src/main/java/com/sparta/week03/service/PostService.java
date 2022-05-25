@@ -16,9 +16,10 @@ public class PostService {
 
     @Transactional
     public Long update(Long id, PostRequestDto requestDto) {
-        Post post = postRepository.findById(id).orElseThrow(
-                () -> new IllegalArgumentException("해당 id의 글이 존재하지 않습니다.")
-        );
+        Post post = postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 id의 글이 존재하지 않습니다."));
+        if (post.getPassword() != requestDto.getPassword()) {
+            new NullPointerException("비밀번호 불일치");
+        }
         post.update(requestDto);
         return post.getId();
     }

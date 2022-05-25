@@ -26,8 +26,8 @@ public class PostController {
 
     // 게시글 조회 API
     @GetMapping("/api/posts")
-    public List<Post> getPosts(String title, String comment, String writer) {
-        return postRepository.findAll();
+    public List<Post> getPosts(@RequestBody PostRequestDto requestDto) {
+        return postRepository.findAllByOrderByCreatedAtDesc();
     }
 
     // 게시글 수정 API
