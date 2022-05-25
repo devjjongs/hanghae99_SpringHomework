@@ -38,4 +38,5 @@ public class Post extends Timestamped{
         this.comment = requestDto.getComment();
         this.writer = requestDto.getWriter();
     }
+
 }

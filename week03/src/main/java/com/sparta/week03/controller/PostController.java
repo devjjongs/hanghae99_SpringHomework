@@ -26,21 +26,19 @@ public class PostController {
 
     // 게시글 조회 API
     @GetMapping("/api/posts")
-    public List<Post> getPosts(@RequestBody PostRequestDto requestDto) {
+    public List<Post> getPosts() {
         return postRepository.findAllByOrderByCreatedAtDesc();
     }
 
     // 게시글 수정 API
     @PutMapping("/api/posts/{id}")
-    public Long updatePosts(@PathVariable Long id, @RequestBody PostRequestDto requestDto) {
+    public boolean updatePosts(@PathVariable Long id, @RequestBody PostRequestDto requestDto) {
         return postService.update(id, requestDto);
     }
 
     // 게시글 삭제 API
-    @DeleteMapping("/api/psots/{id}")
-    public Long delete(@PathVariable Long id) {
-        postRepository.deleteById(id);
-        return id;
+    @DeleteMapping("/api/posts/{id}")
+    public boolean deletePosts(@PathVariable Long id, @RequestBody PostRequestDto requestDto) {
+        return postService.delete(id, requestDto);
     }
-
 }
