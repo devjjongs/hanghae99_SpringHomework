@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f2094e7-c24c-4224-9a71-d29dbc2cab4b" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparta_spring_homework/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="3f2094e7-c24c-4224-9a71-d29dbc2cab4b" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/whdtj/B.Study/hanghae99_SpringHonework",
+    "last_opened_file_path": "C:/Users/whdtj/B.Study/hanghae99_SpringHonework/week02",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,6 +65,7 @@
       <workItem from="1652958366208" duration="8417000" />
       <workItem from="1652967296361" duration="4367000" />
       <workItem from="1652979152579" duration="1470000" />
+      <workItem from="1653443499194" duration="25000" />
     </task>
     <servers />
   </component>
