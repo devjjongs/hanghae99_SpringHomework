@@ -1,5 +1,6 @@
 package com.sparta.week03.controller;
 
+import com.sparta.week03.domain.GetPostResponseDto;
 import com.sparta.week03.domain.Post;
 import com.sparta.week03.domain.PostRepository;
 import com.sparta.week03.domain.PostRequestDto;
@@ -26,8 +27,8 @@ public class PostController {
 
     // 게시글 조회 API
     @GetMapping("/api/posts")
-    public List<Post> getPosts() {
-        return postRepository.findAllByOrderByCreatedAtDesc();
+    public List<GetPostResponseDto> getPosts() {
+        return postService.getPosts();
     }
 
     // 게시글 수정 API
