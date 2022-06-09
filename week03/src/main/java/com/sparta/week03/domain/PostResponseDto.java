@@ -2,7 +2,6 @@ package com.sparta.week03.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
@@ -12,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 //@RequiredArgsConstructor
 // 왜 생성자가 ?
-public class GetPostResponseDto {
+public class PostResponseDto {
     private Long id;
     private String title;
     private String comment;

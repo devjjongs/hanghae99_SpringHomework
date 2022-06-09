@@ -1,6 +1,6 @@
 package com.sparta.week03.service;
 
-import com.sparta.week03.domain.GetPostResponseDto;
+import com.sparta.week03.domain.PostResponseDto;
 import com.sparta.week03.domain.Post;
 import com.sparta.week03.domain.PostRepository;
 import com.sparta.week03.domain.PostRequestDto;
@@ -18,16 +18,16 @@ public class PostService {
 
     // 데이터 조회
     @Transactional
-    public List<GetPostResponseDto> getPosts() {
+    public List<PostResponseDto> getPosts() {
         // 전체 목록을 postList로 불러오기
         List<Post> postList = postRepository.findAll();
         // Post를 Dto로 바꾸기
-        List<GetPostResponseDto> getPostResponseDto = new ArrayList<>();
+        List<PostResponseDto> getPostResponseDto = new ArrayList<>();
         for (int i = 0; i < postList.size(); i++) {
             // list 반복
             Post post = postList.get(i);
             // Dto에 추가
-            GetPostResponseDto getPostDto = new GetPostResponseDto(post.getId(), post.getTitle(), post.getComment(), post.getWriter(), post.getCreatedAt());
+            PostResponseDto getPostDto = new PostResponseDto(post.getId(), post.getTitle(), post.getComment(), post.getWriter(), post.getCreatedAt());
             // 생성한 데이터 추가
             getPostResponseDto.add(getPostDto);
         }

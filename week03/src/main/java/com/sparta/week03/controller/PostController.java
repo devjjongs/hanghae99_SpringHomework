@@ -1,6 +1,6 @@
 package com.sparta.week03.controller;
 
-import com.sparta.week03.domain.GetPostResponseDto;
+import com.sparta.week03.domain.PostResponseDto;
 import com.sparta.week03.domain.Post;
 import com.sparta.week03.domain.PostRepository;
 import com.sparta.week03.domain.PostRequestDto;
@@ -27,7 +27,7 @@ public class PostController {
 
     // 게시글 조회 API
     @GetMapping("/api/posts")
-    public List<GetPostResponseDto> getPosts() {
+    public List<PostResponseDto> getPosts() {
         return postService.getPosts();
     }
 
